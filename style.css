@@ -1,3 +1,5 @@
+/* start global rules */
+
 * {
   padding: 0;
   margin: 0;
@@ -8,12 +10,25 @@ body {
   background-color: rgb(40, 40, 40);
   color: white;
   font-family: monospace;
+  overflow-x: hidden;
+  width: 100%;
 }
 
+/* start global rules */
+
+/* start crud */
 .crud {
   text-align: center;
   padding: 1rem 6rem;
 }
+@media (max-width: 1000px) {
+  .crud {
+    text-align: center;
+    padding: 1rem 10px;
+    width: 100%;
+  }
+}
+/* start header  */
 .crud .header h1 {
   font-size: 50px;
   padding: 1rem 0;
@@ -22,6 +37,8 @@ body {
   font-size: 20px;
   margin-bottom: 10px;
 }
+/* end header  */
+
 input {
   width: 100%;
   padding: 15px 20px;
@@ -42,9 +59,20 @@ input:focus {
   transform: scale(1.04);
   background: black;
 }
+.price {
+  margin-bottom: 10px;
+}
 .price > input {
   width: 20%;
   margin-right: 10px;
+  margin-bottom: 20px;
+}
+@media (max-width: 800px) {
+  .price > input {
+    width: 40%;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
 }
 #total {
   background-color: brown;
@@ -70,7 +98,64 @@ button {
   cursor: pointer;
   transition: 0.3s;
 }
+@media (max-width: 800px) {
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
 button:hover {
   background-color: rgb(60, 2, 115);
-  letter-spacing: 3px;
 }
+
+.btn_search {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+#delete_all {
+  margin: 15px 0;
+}
+table {
+  width: 100%;
+  font-size: 22px;
+  margin: 3rem 0;
+  border-top: 1px solid rgb(0, 0, 0);
+  border-right: 1px solid rgb(0, 0, 0);
+  border-left: 1px solid rgb(0, 0, 0);
+}
+@media (max-width: 800px) {
+  table {
+    width: min(600px, 100%);
+    height: fit-content;
+    font-size: 14px;
+    overflow: scroll;
+  }
+}
+thead,
+tbody {
+  width: 100%;
+}
+table thead {
+  height: 60px;
+}
+table tbody tr {
+  height: 50px;
+}
+table tbody tr td {
+  border-bottom: 1px solid white;
+  padding: 10px 2px;
+}
+table thead tr th {
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+table button {
+  padding: 10px 0;
+}
+table button:hover {
+  transform: scale(1);
+  letter-spacing: 0px;
+}
+
+/* end crud */

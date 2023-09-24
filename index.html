@@ -5,29 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cruds || yossef</title>
+    <!-- main css file -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="crud">
+        <!-- start header -->
         <div class="header">
             <h1>CRUDS</h1>
             <p>CREATE READE UPDATA DELETE SEARCH</p>
         </div>
-        <input type="text" placeholder="title" id="title">
-        <div class="price">
-            <input type="number" id="price" placeholder="price">
-            <input type="number" id="taxes" placeholder="taxes">
-            <input type="number" id="ads" placeholder="ads">
-            <input type="number" id="discount" placeholder="discount">
-            <small id="total">1212</small>
+        <!-- start inputs -->
+        <div class="inputs">
+            <input type="text" placeholder="title" id="title">
+            <div class="price">
+                <input onkeyup="" type="number" id="price" placeholder="price">
+                <input type="number" id="taxes" placeholder="taxes">
+                <input type="number" id="ads" placeholder="ads">
+                <input type="number" id="discount" placeholder="discount">
+                <small id="total"></small>
+            </div>
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+            <button id="submit">create</button>
         </div>
-        <input type="number" placeholder="count" id="count">
-        <input type="text" placeholder="category" id="category">
-        <button id="submit">create</button>
-    </div>
+        <!-- start outputs -->
+        <div class="outputs">
+            <input type="text" placeholder="Search By Title" id="Search">
+            <div class="btn_search">
+                <button id="search_title">Search By Title</button>
+                <button id="search_category">Search By Category</button>
+            </div>
+            <div id="delete_all">
 
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>TITLE</th>
+                        <th>PRICE</th>
+                        <th>TAXES</th>
+                        <th>ADS</th>
+                        <th>DISCOUNT</th>
+                        <th>TOTAL</th>
+                        <th>CATEGORY</th>
+                        <th>UPDATE</th>
+                        <th>DELETE</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <!-- main js file -->
     <script src="script.js"></script>
 </body>
 
